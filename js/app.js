@@ -63,11 +63,10 @@ $canvas.mousedown(function(e){
     lastEvent = e;
   }
 
-  // Draw a circle where the mouse is clicked
+  // Draw a circle where the mouse is dragged
   if (mouseDown) {
-    drawCircle(e.offsetX, e.offsetY);
+    drawCircles(e.offsetX, e.offsetY);
   }
-
 
 }).mouseup(function(){
   mouseDown = false;
@@ -75,14 +74,35 @@ $canvas.mousedown(function(e){
   $canvas.mouseup();
 });
 
+  
 
-function drawCircle(x, y) {
+// $canvas.mousedown(function(e){
+//   drawPattern(e.offsetX, e.offsetY);
+// });
+
+
+function drawCircle(x, y, radius) {
   context.beginPath();
   x = (Math.round(x / 20)) * 20;
   y = (Math.round(y / 20)) * 20;
 
-  context.ellipse(x, y, 10, 10, 50 * Math.PI/180, 0, 2 * Math.PI);
+  context.ellipse(x, y, radius, radius, 50 * Math.PI/180, 0, 2 * Math.PI);
   context.fillStyle = color;
   // context.fillStyle = "rgba(50, 50, 240, 0.1)";
   context.fill();
+}
+
+function drawCircles(x, y) {
+  var radius = 20;
+  var offset = 10;
+
+  drawCircle(x, y, radius);
+
+  radius = radius/2;
+
+  drawCircle(x, y+offset, radius); 
+  drawCircle(x, y-offset, radius); 
+
+  drawCircle(x+offset, y, radius);
+  drawCircle(x-offset, y, radius);
 }

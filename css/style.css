@@ -28,6 +28,7 @@ canvas {
 	width: 600px;
 	border-radius: 5px;
 	overflow: hidden;
+	background: #fff;
 }
 ul {
 	list-style:none;
@@ -45,7 +46,7 @@ ul li, #newColor {
 	border-radius: 60px;
 	cursor: pointer;
 	border: 0;
-	box-shadow: 0 3px 0 0 #222;
+	/*box-shadow: 0 3px 0 0 #222;*/
 }
 
 ul li {
@@ -66,7 +67,7 @@ ul li {
 }
 
 .selected {
-	border: 7px solid #fff;
+	border: 7px solid #ddd;
 	width: 40px;
 	height: 40px;
 }
