@@ -2,11 +2,11 @@
 Palette from color.adobe.com
 https://color.adobe.com/Vitamin-C-color-theme-492199/
 
-blue:   #004358
-aqua:   #1F8A70
-green:  #BEDB39
-yellow: #FFE11A
-orange: #FD7400
+blue:   #004358		rgba(   0,  67,  88, 0.1)
+aqua:   #1F8A70		rgba(  31, 138, 112, 0.1)
+green:  #BEDB39		rgba( 190, 219,  57, 0.1)
+yellow: #FFE11A		rgba( 255, 225,  26, 0.1)
+orange: #FD7400		rgba( 253, 116,   0, 0.1)
 */
 
 
@@ -54,15 +54,15 @@ ul li {
 }
 
 .red {
-	background: #FD7400;
+	background: rgba( 253, 116,   0, 0.1);
 }
 
 .blue {
-	background: #004358;
+	background: rgba(   0,  67,  88, 0.1);
 }
 
 .yellow {
-	background: #FFE11A;
+	background: rgba( 255, 225,  26, 0.1);
 }
 
 .selected {

@@ -65,7 +65,6 @@ $canvas.mousedown(function(e){
 
   // Draw a circle where the mouse is clicked
   if (mouseDown) {
-    console.log(e.offsetX);
     drawCircle(e.offsetX, e.offsetY);
   }
 
@@ -83,8 +82,7 @@ function drawCircle(x, y) {
   y = (Math.round(y / 20)) * 20;
 
   context.ellipse(x, y, 10, 10, 50 * Math.PI/180, 0, 2 * Math.PI);
+  context.fillStyle = color;
+  // context.fillStyle = "rgba(50, 50, 240, 0.1)";
   context.fill();
 }
-
-drawCircle(50, 50);
-
