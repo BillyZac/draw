@@ -65,7 +65,7 @@ $canvas.mousedown(function(e){
 
   // Draw a circle where the mouse is dragged
   if (mouseDown) {
-    drawCircles(e.offsetX, e.offsetY);
+    recursiveCircles(e.offsetX, e.offsetY, 20);
   }
 
 }).mouseup(function(){
@@ -92,17 +92,18 @@ function drawCircle(x, y, radius) {
   context.fill();
 }
 
-function drawCircles(x, y) {
-  var radius = 20;
-  var offset = 10;
+// Not currently used. Replaced by recursiveCircles()
+// function drawCircles(x, y) {
+//   var radius = 20;
+//   var offset = 10;
 
-  drawCircle(x, y, radius);
+//   drawCircle(x, y, radius);
 
-  radius = radius/2;
+//   radius = radius/2;
 
-  drawCircle(x, y+offset, radius); 
-  drawCircle(x, y-offset, radius); 
+//   drawCircle(x, y+offset, radius); 
+//   drawCircle(x, y-offset, radius); 
 
-  drawCircle(x+offset, y, radius);
-  drawCircle(x-offset, y, radius);
-}
+//   drawCircle(x+offset, y, radius);
+//   drawCircle(x-offset, y, radius);
+// }
