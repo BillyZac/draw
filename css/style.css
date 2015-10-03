@@ -1,3 +1,15 @@
+/*
+Palette from color.adobe.com
+https://color.adobe.com/Vitamin-C-color-theme-492199/
+
+blue:   #004358
+aqua:   #1F8A70
+green:  #BEDB39
+yellow: #FFE11A
+orange: #FD7400
+*/
+
+
 body {
 	background: #384047;
 	font-family: sans-serif;
@@ -42,15 +54,15 @@ ul li {
 }
 
 .red {
-	background: #fc4c4f;
+	background: #FD7400;
 }
 
 .blue {
-	background: #4fa3fc;
+	background: #004358;
 }
 
 .yellow {
-	background: #ECD13F;
+	background: #FFE11A;
 }
 
 .selected {
