@@ -90,7 +90,9 @@ function drawCircle(x, y, radius) {
   context.fillStyle = color;
   // context.fillStyle = "rgba(50, 50, 240, 0.1)";
   context.fill();
+
 }
+
 
 // Not currently used. Replaced by recursiveCircles()
 // function drawCircles(x, y) {
