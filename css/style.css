@@ -12,14 +12,22 @@ orange: #FD7400		rgba( 253, 116,   0, 0.1)
 
 body {
 	background: #384047;
-	font-family: sans-serif;
 }
+
+#explanation p, #explanation h1 {
+	color: #eee;
+}
+
+h1 {
+	border-bottom: 5px solid #FFB03B;
+	padding-top: 20px;
+}
+
 canvas {
 	background: #eee;
 	display: block;
 	margin: 50px auto 10px;
 	border-radius: 5px;
-	box-shadow: 0 4px 0 0 #222;
 	cursor: url(../img/cursor.png), crosshair;
 }
 .controls {
@@ -55,21 +63,19 @@ ul li {
 }
 
 .red {
-	background: rgba( 253, 116,   0, 0.1);
+	background: rgb( 253, 116,   0);
 }
 
 .blue {
-	background: rgba(   0,  67,  88, 0.1);
+	background: rgb(   0,  67,  88);
 }
 
 .yellow {
-	background: rgba( 255, 225,  26, 0.1);
+	background: rgb( 255, 225,  26);
 }
 
 .selected {
-	border: 7px solid #ddd;
-	width: 40px;
-	height: 40px;
+	border: 7px solid #384047;
 }
 button {
 	background: #68B25B;

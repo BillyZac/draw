@@ -1,6 +1,5 @@
-//Problem: User interaction causes no change to application
-//Solution: User interaction causes application to respond
 var color = $(".selected").css("background-color");
+var transColor = color;
 var $canvas = $("canvas");
 var context = $canvas[0].getContext("2d");
 var lastEvent;
@@ -25,6 +24,7 @@ $("#revealColorSelect").click(function(){
   changeColor();
   $("#colorSelect").toggle();
 });
+ 
 
 //Update the new color <span> 
 function changeColor() {
@@ -87,8 +87,12 @@ function drawCircle(x, y, radius) {
   y = (Math.round(y / 20)) * 20;
 
   context.ellipse(x, y, radius, radius, 50 * Math.PI/180, 0, 2 * Math.PI);
-  context.fillStyle = color;
-  // context.fillStyle = "rgba(50, 50, 240, 0.1)";
+  
+  //Make color transparent
+  transColor = color.replace(")", ", 0.1)");
+  transColor = transColor.replace("rgb", "rgba");
+
+  context.fillStyle = transColor;
   context.fill();
 
 }
