@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+
 <head>
-	<title>Simple Drawing Application</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Draw</title>
+	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/foundation.css">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="js/vendor/modernizr.js"></script>
 </head>
+
 <body>
 	<canvas	width="1000" height="600"></canvas>
 	<div class="controls">
@@ -12,6 +20,11 @@
 			<li class="blue"></li>
 			<li class="yellow"></li>
 		</ul>
+	</div>
+	<div class="row">
+		<div class="large-8 large-offset-2 medium-8 medium-offset-2 column">
+			<p>This little thing draws a series of recursively generated circles with each stroke of the pen. Try it out in Chrome. (Other browsers are not fully supported... yet.)</p>	
+		</div>
 	</div>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>	
